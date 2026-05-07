@@ -37,8 +37,8 @@ services:
     environment:
       - MYSQL_USER=jobber
       - MYSQL_DATABASE=jobber_auth
-      - MYSQL_ROOT_PASSWORD=api
-      - MYSQL_PASSWORD=api
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     ports:
       - '3306:3306'
     volumes:
@@ -50,7 +50,7 @@ services:
     restart: always
     environment:
       - POSTGRES_USER=jobber
-      - POSTGRES_PASSWORD=api
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=jobber_reviews
     ports:
       - '5432:5432'
@@ -86,7 +86,7 @@ services:
       xpack.monitoring.collection.enabled: "true"
       xpack.security.enrollment.enabled: "true"
       xpack.security.authc.token.enabled: "true"
-      ELASTIC_PASSWORD: admin1234
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
     ports:
       - 9300:9300
       - 9200:9200
@@ -102,8 +102,8 @@ services:
     environment:
       - ELASTICSEARCH_HOSTS=["http://elasticsearch_container:9200"]
       - ELASTICSEARCH_USERNAME=kibana_system
-      - ELASTICSEARCH_PASSWORD=kibana
-      - ELASTICSEARCH_SERVICEACCOUNT_TOKEN=AAEAAWVsYXN0aWMva2liYW5hL2pvYmJlci1raWJhbmE6N3BWZ0ItZWxSY21wMEJ0Y3ZKNTlHZw
+      - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
+      - ELASTICSEARCH_SERVICEACCOUNT_TOKEN=${ELASTICSEARCH_SERVICEACCOUNT_TOKEN}
       - XPACK_FLEET_AGENTS_ELASTICSEARCH_HOSTS=["http://elasticsearch_container:9200"]
     ports:
       - 5601:5601
@@ -180,11 +180,11 @@ services:
     env_file: ../server/1-gateway-service/.env
     environment:
         - ENABLE_APM=1
-        - GATEWAY_JWT_TOKEN=1282722b942e08c8a6cb033aa6ce850e
-        - JWT_TOKEN=8db8f85991bb28f45ac0107f2a1b349c
+        - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
+        - JWT_TOKEN=${JWT_TOKEN}
         - NODE_ENV=development
-        - SECRET_KEY_ONE=032c5c3cfc37938ae6dd43d3a3ec7834
-        - SECRET_KEY_TWO=d66e377018c0bc0b5772bbc9b131e6d9
+        - SECRET_KEY_ONE=${SECRET_KEY_ONE}
+        - SECRET_KEY_TWO=${SECRET_KEY_TWO}
         - CLIENT_URL=http://localhost:3000
         - AUTH_BASE_URL=http://auth_container:4002
         - USERS_BASE_URL=http://localhost:4003
@@ -214,7 +214,7 @@ services:
       - CLIENT_URL=http://localhost:3000
       - RABBITMQ_ENDPOINT=amqp://jobber:jobberpass@rabbitmq_container:5672
       - SENDER_EMAIL=lysanne.rutherford88@ethereal.email
-      - SENDER_EMAIL_PASSWORD=ad8y45AkfebKmW8rCV
+      - SENDER_EMAIL_PASSWORD=${SENDER_EMAIL_PASSWORD}
       - ELASTIC_SEARCH_URL=http://elastic:admin1234@elasticsearch_container:9200
       - ELASTIC_APM_SERVER_URL=http://apm_server_container:8200
       - ELASTIC_APM_SECRET_TOKEN=
@@ -232,16 +232,16 @@ services:
     env_file: ../server/3-auth-service/.env
     environment:
       - ENABLE_APM=1
-      - GATEWAY_JWT_TOKEN=1282722b942e08c8a6cb033aa6ce850e
-      - JWT_TOKEN=8db8f85991bb28f45ac0107f2a1b349c
+      - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
+      - JWT_TOKEN=${JWT_TOKEN}
       - NODE_ENV=development
       - AP_GATEWAY_URL=http://gateway_container:4000
       - CLIENT_URL=http://localhost:3000
       - RABBITMQ_ENDPOINT=amqp://jobber:jobberpass@rabbitmq_container:5672
       - MYSQL_DB=mysql://jobber:api@mysql_container:3306/jobber_auth
       - CLOUD_NAME=dyamr9ym3
-      - CLOUD_API_KEY=385269193982147
-      - CLOUD_API_SECRET=-h9hU43QMy68AcIaMyP0ULKbibI
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
       - ELASTIC_SEARCH_URL=http://elastic:admin1234@elasticsearch_container:9200
       - ELASTIC_APM_SERVER_URL=http://apm_server_container:8200
       - ELASTIC_APM_SECRET_TOKEN=
@@ -261,14 +261,14 @@ services:
     environment:
       - ENABLE_APM=1
       - DATABASE_URL=mongodb://mongodb_container:27017/jobber-users
-      - GATEWAY_JWT_TOKEN=1282722b942e08c8a6cb033aa6ce850e
-      - JWT_TOKEN=8db8f85991bb28f45ac0107f2a1b349c
+      - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
+      - JWT_TOKEN=${JWT_TOKEN}
       - NODE_ENV=development
       - AP_GATEWAY_URL=http://gateway_container:4000
       - RABBITMQ_ENDPOINT=amqp://jobber:jobberpass@rabbitmq_container:5672
       - CLOUD_NAME=dyamr9ym3
-      - CLOUD_API_KEY=385269193982147
-      - CLOUD_API_SECRET=-h9hU43QMy68AcIaMyP0ULKbibI
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
       - REDIS_HOST=redis://redis_container:6379
       - ELASTIC_SEARCH_URL=http://elastic:admin1234@elasticsearch_container:9200
       - ELASTIC_APM_SERVER_URL=http://apm_server_container:8200
@@ -289,14 +289,14 @@ services:
     environment:
       - ENABLE_APM=1
       - DATABASE_URL=mongodb://mongodb_container:27017/jobber-gig
-      - GATEWAY_JWT_TOKEN=1282722b942e08c8a6cb033aa6ce850e
-      - JWT_TOKEN=8db8f85991bb28f45ac0107f2a1b349c
+      - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
+      - JWT_TOKEN=${JWT_TOKEN}
       - NODE_ENV=development
       - AP_GATEWAY_URL=http://gateway_container:4000
       - RABBITMQ_ENDPOINT=amqp://jobber:jobberpass@rabbitmq_container:5672
       - CLOUD_NAME=dyamr9ym3
-      - CLOUD_API_KEY=385269193982147
-      - CLOUD_API_SECRET=-h9hU43QMy68AcIaMyP0ULKbibI
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
       - REDIS_HOST=redis://redis_container:6379
       - ELASTIC_SEARCH_URL=http://elastic:admin1234@elasticsearch_container:9200
       - ELASTIC_APM_SERVER_URL=http://apm_server_container:8200
@@ -317,14 +317,14 @@ services:
     environment:
       - ENABLE_APM=1
       - DATABASE_URL=mongodb://mongodb_container:27017/jobber-chat
-      - GATEWAY_JWT_TOKEN=1282722b942e08c8a6cb033aa6ce850e
-      - JWT_TOKEN=8db8f85991bb28f45ac0107f2a1b349c
+      - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
+      - JWT_TOKEN=${JWT_TOKEN}
       - NODE_ENV=development
       - AP_GATEWAY_URL=http://gateway_container:4000
       - RABBITMQ_ENDPOINT=amqp://jobber:jobberpass@rabbitmq_container:5672
       - CLOUD_NAME=dyamr9ym3
-      - CLOUD_API_KEY=385269193982147
-      - CLOUD_API_SECRET=-h9hU43QMy68AcIaMyP0ULKbibI
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
       - ELASTIC_SEARCH_URL=http://elastic:admin1234@elasticsearch_container:9200
       - ELASTIC_APM_SERVER_URL=http://apm_server_container:8200
       - ELASTIC_APM_SECRET_TOKEN=
@@ -344,16 +344,16 @@ services:
     environment:
       - ENABLE_APM=1
       - DATABASE_URL=mongodb://mongodb_container:27017/jobber-chat
-      - GATEWAY_JWT_TOKEN=1282722b942e08c8a6cb033aa6ce850e
-      - JWT_TOKEN=8db8f85991bb28f45ac0107f2a1b349c
+      - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
+      - JWT_TOKEN=${JWT_TOKEN}
       - NODE_ENV=development
       - AP_GATEWAY_URL=http://gateway_container:4000
       - CLIENT_URL=http://localhost:3000
       - RABBITMQ_ENDPOINT=amqp://jobber:jobberpass@rabbitmq_container:5672
       - STRIPE_API_KEY=${STRIPE_API_KEY}
       - CLOUD_NAME=dyamr9ym3
-      - CLOUD_API_KEY=385269193982147
-      - CLOUD_API_SECRET=-h9hU43QMy68AcIaMyP0ULKbibI
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
       - ELASTIC_SEARCH_URL=http://elastic:admin1234@elasticsearch_container:9200
       - ELASTIC_APM_SERVER_URL=http://apm_server_container:8200
       - ELASTIC_APM_SECRET_TOKEN=
@@ -376,14 +376,14 @@ services:
       - DATABASE_USER=jobber
       - DATABASE_PASSWORD=api
       - DATABASE_NAME=jobber_reviews
-      - GATEWAY_JWT_TOKEN=1282722b942e08c8a6cb033aa6ce850e
-      - JWT_TOKEN=8db8f85991bb28f45ac0107f2a1b349c
+      - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
+      - JWT_TOKEN=${JWT_TOKEN}
       - NODE_ENV=development
       - AP_GATEWAY_URL=http://gateway_container:4000
       - RABBITMQ_ENDPOINT=amqp://jobber:jobberpass@rabbitmq_container:5672
       - CLOUD_NAME=dyamr9ym3
-      - CLOUD_API_KEY=385269193982147
-      - CLOUD_API_SECRET=-h9hU43QMy68AcIaMyP0ULKbibI
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
       - ELASTIC_SEARCH_URL=http://elastic:admin1234@elasticsearch_container:9200
       - ELASTIC_APM_SERVER_URL=http://apm_server_container:8200
       - ELASTIC_APM_SECRET_TOKEN=
