@@ -9,7 +9,7 @@ These services are required to be executed first with so as to prevent errors wh
 * `postgres`
   * `docker compose up -d postgres`
 * `rabbitmq`
-  * `docker compose up -d redis`
+  * `docker compose up -d rabbitmq`
 * `elasticsearch`
   * `docker compose up -d elasticsearch`
   * It could take somewhere between 5 and 10 minutes for elasticsearch to be running.

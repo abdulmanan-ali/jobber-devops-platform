@@ -9,7 +9,7 @@ services:
       - '6379:6379'
     command: redis-server --loglevel warning
     volumes:
-      - ./docker-volumes/cache:/data
+      - redis_data:/data
   
   redis-commander:
     container_name: redis-commander
@@ -27,11 +27,11 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./docker-volumes/data:/data/db
+      - mongodb_data:/data/db
   
   mysql:
     container_name: mysql_container
-    image: mysql
+    image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
@@ -42,11 +42,11 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - ./docker-volumes/mysql:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
   
   postgres:
     container_name: postgres_container
-    image: postgres
+    image: postgres:16
     restart: always
     environment:
       - POSTGRES_USER=jobber
@@ -55,7 +55,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - ./docker-volumes/postgres:/var/lib/postgresql
+      - postgres_data:/var/lib/postgresql/data
   
   rabbitmq:
     container_name: rabbitmq_container
@@ -91,7 +91,7 @@ services:
       - 9300:9300
       - 9200:9200
     volumes:
-      - ./docker-volumes/elasticsearch-data:/usr/share/elasticsearch/data
+      - elasticsearch_data:/usr/share/elasticsearch/data
     networks:
       - elastic
   
@@ -362,7 +362,7 @@ services:
       - mongodb
   
   review:
-    container_name: order_container
+    container_name: review_container
     build:
       context: ../server/8-review-service
       dockerfile: Dockerfile.dev
@@ -372,7 +372,7 @@ services:
     env_file: ../server/8-review-service/.env
     environment:
       - ENABLE_APM=1
-      - DATABASE_HOST=192.168.0.42
+      - DATABASE_HOST=postgres_container
       - DATABASE_USER=jobber
       - DATABASE_PASSWORD=api
       - DATABASE_NAME=jobber_reviews
@@ -400,7 +400,7 @@ services:
       - 8080:8080
       - 50000:50000
     volumes:
-      - ./docker-volumes/jenkins_compose/jenkins_configuration:/var/jenkins_home
+      - jenkins_data:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
 
   jenkins-agent:
@@ -417,4 +417,10 @@ networks:
   elastic:
     name: elastic
 
-
+volumes:
+  redis_data:
+  mongodb_data:
+  mysql_data:
+  postgres_data:
+  elasticsearch_data:
+  jenkins_data:
