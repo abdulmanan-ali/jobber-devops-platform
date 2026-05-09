@@ -2,3 +2,11 @@
 *.env
 .env.*
 node_modules/
+# Environment files
+microservices/**/.env
+microservices/**/.env.dev
+volumes/.env
+
+# NPM auth files
+microservices/**/.npmrc
+

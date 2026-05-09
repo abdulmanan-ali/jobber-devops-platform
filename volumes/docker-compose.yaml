@@ -172,12 +172,12 @@ services:
   gateway:
     container_name: gateway_container
     build:
-      context: ../server/1-gateway-service
+      context: ../microservices/1-gateway-service
       dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 4000:4000
-    env_file: ../server/1-gateway-service/.env
+    env_file: ../microservices/1-gateway-service/.env
     environment:
         - ENABLE_APM=1
         - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
@@ -202,12 +202,12 @@ services:
   notifications:
     container_name: notification_container
     build:
-      context: ../server/2-notification-service
+      context: ../microservices/2-notification-service
       dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 4001:4001
-    env_file: ../server/2-notification-service/.env
+    env_file: ../microservices/2-notification-service/.env
     environment:
       - ENABLE_APM=1
       - NODE_ENV=development
@@ -224,12 +224,12 @@ services:
   auth:
     container_name: auth_container
     build:
-      context: ../server/3-auth-service
+      context: ../microservices/3-auth-service
       dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 4002:4002
-    env_file: ../server/3-auth-service/.env
+    env_file: ../microservices/3-auth-service/.env
     environment:
       - ENABLE_APM=1
       - GATEWAY_JWT_TOKEN=${GATEWAY_JWT_TOKEN}
@@ -252,12 +252,12 @@ services:
   users:
     container_name: users_container
     build:
-      context: ../server/4-users-service
+      context: ../microservices/4-users-service
       dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 4003:4003
-    env_file: ../server/4-users-service/.env
+    env_file: ../microservices/4-users-service/.env
     environment:
       - ENABLE_APM=1
       - DATABASE_URL=mongodb://mongodb_container:27017/jobber-users
@@ -280,12 +280,12 @@ services:
   gig:
     container_name: gig_container
     build:
-      context: ../server/5-gig-service
+      context: ../microservices/5-gig-service
       dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 4004:4004
-    env_file: ../server/5-gig-service/.env
+    env_file: ../microservices/5-gig-service/.env
     environment:
       - ENABLE_APM=1
       - DATABASE_URL=mongodb://mongodb_container:27017/jobber-gig
@@ -308,12 +308,12 @@ services:
   chat:
     container_name: chat_container
     build:
-      context: ../server/6-chat-service
+      context: ../microservices/6-chat-service
       dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 4005:4005
-    env_file: ../server/6-chat-service/.env
+    env_file: ../microservices/6-chat-service/.env
     environment:
       - ENABLE_APM=1
       - DATABASE_URL=mongodb://mongodb_container:27017/jobber-chat
@@ -335,12 +335,12 @@ services:
   order:
     container_name: order_container
     build:
-      context: ../server/7-order-service
+      context: ../microservices/7-order-service
       dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 4006:4006
-    env_file: ../server/7-order-service/.env
+    env_file: ../microservices/7-order-service/.env
     environment:
       - ENABLE_APM=1
       - DATABASE_URL=mongodb://mongodb_container:27017/jobber-chat
@@ -364,12 +364,12 @@ services:
   review:
     container_name: review_container
     build:
-      context: ../server/8-review-service
+      context: ../microservices/8-review-service
       dockerfile: Dockerfile.dev
     restart: always
     ports:
       - 4007:4007
-    env_file: ../server/8-review-service/.env
+    env_file: ../microservices/8-review-service/.env
     environment:
       - ENABLE_APM=1
       - DATABASE_HOST=postgres_container
