@@ -1,5 +1,5 @@
 import { addDataToIndex, deleteIndexedData, getIndexedData, updateIndexedData } from '@gig/elasticsearch';
-import { IRatingTypes, IReviewMessageDetails, ISellerDocument, ISellerGig } from '@uzochukwueddie/jobber-shared';
+import { IRatingTypes, IReviewMessageDetails, ISellerDocument, ISellerGig } from '@abdulmanan-ali/jobber-shared';
 import { gigsSearchBySellerId } from '@gig/services/search.service';
 import { GigModel } from '@gig/models/gig.schema';
 import { publishDirectMessage } from '@gig/queues/gig.producer';

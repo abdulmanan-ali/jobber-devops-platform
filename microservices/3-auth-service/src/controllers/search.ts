@@ -1,6 +1,6 @@
 
 import { gigById, gigsSearch } from '@auth/services/search.service';
-import { IPaginateProps, ISearchResult } from '@uzochukwueddie/jobber-shared';
+import { IPaginateProps, ISearchResult } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { sortBy } from 'lodash';
 import { StatusCodes } from 'http-status-codes';

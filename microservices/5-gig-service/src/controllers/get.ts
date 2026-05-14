@@ -1,7 +1,7 @@
 import { getUserSelectedGigCategory } from '@gig/redis/gig.cache';
 import { getGigById, getSellerGigs, getSellerPausedGigs } from '@gig/services/gig.service';
 import { getMoreGigsLikeThis, getTopRatedGigsByCategory, gigsSearchByCategory } from '@gig/services/search.service';
-import { ISearchResult, ISellerGig } from '@uzochukwueddie/jobber-shared';
+import { ISearchResult, ISellerGig } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 

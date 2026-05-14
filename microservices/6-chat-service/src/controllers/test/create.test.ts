@@ -2,12 +2,12 @@
 import { Request, Response } from 'express';
 import * as chatService from '@chat/services/message.service';
 import { messageSchema } from '@chat/schemes/message';
-import * as helper from '@uzochukwueddie/jobber-shared';
+import * as helper from '@abdulmanan-ali/jobber-shared';
 import { chatMockRequest, chatMockResponse, authUserPayload, messageDocument } from '@chat/controllers/test/mocks/chat.mock';
 import { message } from '@chat/controllers/create';
 
 jest.mock('@chat/services/message.service');
-jest.mock('@uzochukwueddie/jobber-shared');
+jest.mock('@abdulmanan-ali/jobber-shared');
 jest.mock('@chat/schemes/message');
 jest.mock('@elastic/elasticsearch');
 

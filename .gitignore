@@ -10,3 +10,5 @@ volumes/.env
 # NPM auth files
 microservices/**/.npmrc
 
+**/.env
+**/.npmrc

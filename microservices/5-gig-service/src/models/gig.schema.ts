@@ -1,4 +1,4 @@
-import { ISellerGig } from '@uzochukwueddie/jobber-shared';
+import { ISellerGig } from '@abdulmanan-ali/jobber-shared';
 import mongoose, { Model, Schema, model } from 'mongoose';
 
 const gigSchema: Schema = new Schema(

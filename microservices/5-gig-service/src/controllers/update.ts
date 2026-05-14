@@ -1,6 +1,6 @@
 import { gigUpdateSchema } from '@gig/schemes/gig';
 import { updateActiveGigProp, updateGig } from '@gig/services/gig.service';
-import { BadRequestError, ISellerGig, isDataURL, uploads } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, ISellerGig, isDataURL, uploads } from '@abdulmanan-ali/jobber-shared';
 import { UploadApiResponse } from 'cloudinary';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';

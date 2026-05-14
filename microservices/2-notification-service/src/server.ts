@@ -1,7 +1,7 @@
 import 'express-async-errors';
 import http from 'http';
 
-import { winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Logger } from 'winston';
 import { config } from '@notifications/config';
 import { Application } from 'express';

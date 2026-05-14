@@ -1,7 +1,7 @@
 import { getDocumentCount } from '@gig/elasticsearch';
 import { gigCreateSchema } from '@gig/schemes/gig';
 import { createGig } from '@gig/services/gig.service';
-import { BadRequestError, ISellerGig, uploads } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, ISellerGig, uploads } from '@abdulmanan-ali/jobber-shared';
 import { UploadApiResponse } from 'cloudinary';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';

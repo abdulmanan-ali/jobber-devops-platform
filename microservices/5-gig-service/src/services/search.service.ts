@@ -1,6 +1,6 @@
 import { SearchResponse } from '@elastic/elasticsearch/lib/api/types';
 import { elasticSearchClient } from '@gig/elasticsearch';
-import { IHitsTotal, IPaginateProps, IQueryList, ISearchResult } from '@uzochukwueddie/jobber-shared';
+import { IHitsTotal, IPaginateProps, IQueryList, ISearchResult } from '@abdulmanan-ali/jobber-shared';
 
 const gigsSearchBySellerId = async (searchQuery: string, active: boolean): Promise<ISearchResult> => {
   const queryList: IQueryList[] = [

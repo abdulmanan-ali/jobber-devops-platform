@@ -1,4 +1,4 @@
-import { IAuthPayload, IReviewDocument } from '@uzochukwueddie/jobber-shared';
+import { IAuthPayload, IReviewDocument } from '@abdulmanan-ali/jobber-shared';
 import { Response } from 'express';
 
 export const reviewMockRequest = (sessionData: IJWT, body: IReviewDocument, currentUser?: IAuthPayload | null, params?: IParams) => ({

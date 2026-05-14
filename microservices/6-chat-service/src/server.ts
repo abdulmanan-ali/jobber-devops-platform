@@ -1,7 +1,7 @@
 import http from 'http';
 
 import 'express-async-errors';
-import { CustomError, IAuthPayload, IErrorResponse, winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { CustomError, IAuthPayload, IErrorResponse, winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Logger } from 'winston';
 import { config } from '@chat/config';
 import { Application, Request, Response, NextFunction, json, urlencoded } from 'express';

@@ -4,10 +4,10 @@ import * as orderService from '@order/services/order.service';
 import { authUserPayload, orderDocument, orderMockRequest, orderMockResponse } from '@order/controllers/order/test/mocks/order.mock';
 import { intent, order } from '@order/controllers/order/create';
 import { orderSchema } from '@order/schemes/order';
-import { BadRequestError, IOrderDocument } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, IOrderDocument } from '@abdulmanan-ali/jobber-shared';
 
 jest.mock('@order/services/order.service');
-jest.mock('@uzochukwueddie/jobber-shared');
+jest.mock('@abdulmanan-ali/jobber-shared');
 jest.mock('@order/schemes/order');
 jest.mock('@elastic/elasticsearch');
 

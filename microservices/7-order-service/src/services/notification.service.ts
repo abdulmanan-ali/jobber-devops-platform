@@ -1,6 +1,6 @@
 import { OrderNotificationModel } from '@order/models/notification.schema';
 import { socketIOOrderObject } from '@order/server';
-import { IOrderDocument, IOrderNotifcation } from '@uzochukwueddie/jobber-shared';
+import { IOrderDocument, IOrderNotifcation } from '@abdulmanan-ali/jobber-shared';
 import { getOrderByOrderId } from '@order/services/order.service';
 
 const createNotification = async (data: IOrderNotifcation): Promise<IOrderNotifcation> => {

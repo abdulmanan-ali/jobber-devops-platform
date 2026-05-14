@@ -2,7 +2,7 @@ import crypto from 'crypto';
 
 import { changePasswordSchema, emailSchema, passwordSchema } from '@auth/schemes/password';
 import { getAuthUserByPasswordToken, getUserByEmail, getUserByUsername, updatePassword, updatePasswordToken } from '@auth/services/auth.service';
-import { BadRequestError, IAuthDocument, IEmailMessageDetails } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, IAuthDocument, IEmailMessageDetails } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { config } from '@auth/config';
 import { publishDirectMessage } from '@auth/queues/auth.producer';

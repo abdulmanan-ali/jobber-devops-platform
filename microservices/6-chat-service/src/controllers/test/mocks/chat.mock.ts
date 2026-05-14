@@ -1,4 +1,4 @@
-import { IAuthPayload, IMessageDocument } from '@uzochukwueddie/jobber-shared';
+import { IAuthPayload, IMessageDocument } from '@abdulmanan-ali/jobber-shared';
 import { Response } from 'express';
 
 export const chatMockRequest = (sessionData: IJWT, body: IMessageDocument, currentUser?: IAuthPayload | null, params?: IParams) => ({

@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { config } from '@order/config';
 import { StatusCodes } from 'http-status-codes';
 import { orderSchema } from '@order/schemes/order';
-import { BadRequestError, IOrderDocument } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, IOrderDocument } from '@abdulmanan-ali/jobber-shared';
 import { createOrder } from '@order/services/order.service';
 
 const stripe: Stripe = new Stripe(config.STRIPE_API_KEY!, {

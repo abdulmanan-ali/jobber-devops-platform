@@ -1,5 +1,5 @@
 import { config } from '@gig/config';
-import { winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Logger } from 'winston';
 import { client } from '@gig/redis/redis.connection';
 

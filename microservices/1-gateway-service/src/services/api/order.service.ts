@@ -1,5 +1,5 @@
 import { AxiosService } from '@gateway/services/axios';
-import { IOrderDocument, IExtendedDelivery, IDeliveredWork, IOrderMessage } from '@uzochukwueddie/jobber-shared';
+import { IOrderDocument, IExtendedDelivery, IDeliveredWork, IOrderMessage } from '@abdulmanan-ali/jobber-shared';
 import axios, { AxiosResponse } from 'axios';
 
 export let axiosOrderInstance: ReturnType<typeof axios.create>;

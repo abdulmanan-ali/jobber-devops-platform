@@ -1,5 +1,5 @@
 import { BuyerModel } from '@users/models/buyer.schema';
-import { IBuyerDocument } from '@uzochukwueddie/jobber-shared';
+import { IBuyerDocument } from '@abdulmanan-ali/jobber-shared';
 
 const getBuyerByEmail = async (email: string): Promise<IBuyerDocument | null> => {
   const buyer: IBuyerDocument | null = await BuyerModel.findOne({ email }).exec() as IBuyerDocument;

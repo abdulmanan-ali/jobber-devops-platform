@@ -1,5 +1,5 @@
 import { config } from '@chat/config';
-import { winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import client, { Channel, Connection } from 'amqplib';
 import { Logger } from 'winston';
 

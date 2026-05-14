@@ -1,5 +1,5 @@
 import { getAuthUserByOTP, signToken, updateUserOTP } from '@auth/services/auth.service';
-import { BadRequestError, IAuthDocument } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, IAuthDocument } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { omit } from 'lodash';

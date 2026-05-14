@@ -1,5 +1,5 @@
 import { SellerModel } from '@users/models/seller.schema';
-import { IOrderMessage, IRatingTypes, IReviewMessageDetails, ISellerDocument } from '@uzochukwueddie/jobber-shared';
+import { IOrderMessage, IRatingTypes, IReviewMessageDetails, ISellerDocument } from '@abdulmanan-ali/jobber-shared';
 import mongoose from 'mongoose';
 import { updateBuyerIsSellerProp } from '@users/services/buyer.service';
 

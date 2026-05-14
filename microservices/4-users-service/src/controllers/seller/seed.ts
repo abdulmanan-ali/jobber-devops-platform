@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { BadRequestError, IBuyerDocument, IEducation, IExperience, ISellerDocument } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, IBuyerDocument, IEducation, IExperience, ISellerDocument } from '@abdulmanan-ali/jobber-shared';
 import { floor, random, sample, sampleSize } from 'lodash';
 import { Request, Response } from 'express';
 import { getRandomBuyers } from '@users/services/buyer.service';

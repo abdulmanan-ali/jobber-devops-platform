@@ -2,7 +2,7 @@ import crypto from 'crypto';
 
 import { createAuthUser, getUserByUsernameOrEmail } from '@auth/services/auth.service';
 import { faker } from '@faker-js/faker';
-import { BadRequestError, IAuthDocument, firstLetterUppercase, lowerCase } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, IAuthDocument, firstLetterUppercase, lowerCase } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { generateUsername } from 'unique-username-generator';
 import { v4 as uuidV4 } from 'uuid';

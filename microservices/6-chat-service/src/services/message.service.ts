@@ -2,7 +2,7 @@ import { ConversationModel } from '@chat/models/conversation.schema';
 import { MessageModel } from '@chat/models/message.schema';
 import { publishDirectMessage } from '@chat/queues/message.producer';
 import { chatChannel, socketIOChatObject } from '@chat/server';
-import { IConversationDocument, IMessageDetails, IMessageDocument, lowerCase } from '@uzochukwueddie/jobber-shared';
+import { IConversationDocument, IMessageDetails, IMessageDocument, lowerCase } from '@abdulmanan-ali/jobber-shared';
 
 const createConversation = async (conversationId: string, sender: string, receiver: string): Promise<void> => {
   await ConversationModel.create({

@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { AxiosService } from '@gateway/services/axios';
 import { config } from '@gateway/config';
-import { ISellerDocument } from '@uzochukwueddie/jobber-shared';
+import { ISellerDocument } from '@abdulmanan-ali/jobber-shared';
 
 export let axiosSellerInstance: ReturnType<typeof axios.create>;
 

@@ -1,5 +1,5 @@
 import { config } from '@notifications/config';
-import { IEmailLocals, winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { IEmailLocals, winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Channel, ConsumeMessage } from 'amqplib';
 import { Logger } from 'winston';
 import { createConnection } from '@notifications/queues/connection';

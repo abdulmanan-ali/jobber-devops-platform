@@ -1,5 +1,5 @@
 import { config } from '@gateway/config';
-import { BadRequestError, IAuthPayload, NotAuthorizedError } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, IAuthPayload, NotAuthorizedError } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response, NextFunction } from 'express';
 import { verify } from 'jsonwebtoken';
 

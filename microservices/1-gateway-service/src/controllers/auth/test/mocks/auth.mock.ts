@@ -1,4 +1,4 @@
-import { IAuthDocument, IAuthPayload } from '@uzochukwueddie/jobber-shared';
+import { IAuthDocument, IAuthPayload } from '@abdulmanan-ali/jobber-shared';
 import { Response } from 'express';
 
 export const authMockRequest = (sessionData: IJWT, body: IAuthMock, currentUser?: IAuthPayload | null, params?: unknown) => ({

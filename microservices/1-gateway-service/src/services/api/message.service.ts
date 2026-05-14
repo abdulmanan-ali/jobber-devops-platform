@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { AxiosService } from '@gateway/services/axios';
 import { config } from '@gateway/config';
-import { IMessageDocument } from '@uzochukwueddie/jobber-shared';
+import { IMessageDocument } from '@abdulmanan-ali/jobber-shared';
 
 export let axiosMessageInstance: ReturnType<typeof axios.create>;
 

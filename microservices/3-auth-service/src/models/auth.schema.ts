@@ -1,5 +1,5 @@
 import { sequelize } from '@auth/database';
-import { IAuthDocument } from '@uzochukwueddie/jobber-shared';
+import { IAuthDocument } from '@abdulmanan-ali/jobber-shared';
 import { compare, hash } from 'bcryptjs';
 import { DataTypes, Model, ModelDefined, Optional } from 'sequelize';
 

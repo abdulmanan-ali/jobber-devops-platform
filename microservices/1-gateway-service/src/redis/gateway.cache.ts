@@ -1,5 +1,5 @@
 import { config } from '@gateway/config';
-import { winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Logger } from 'winston';
 import { createClient } from 'redis';
 

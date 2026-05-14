@@ -1,4 +1,4 @@
-import { verifyGatewayRequest } from '@uzochukwueddie/jobber-shared';
+import { verifyGatewayRequest } from '@abdulmanan-ali/jobber-shared';
 import { Application } from 'express';
 import { healthRoutes } from '@chat/routes/health';
 import { messageRoutes } from '@chat/routes/message';

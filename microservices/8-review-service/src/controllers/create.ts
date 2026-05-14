@@ -1,5 +1,5 @@
 import { addReview } from '@review/services/review.service';
-import { IReviewDocument } from '@uzochukwueddie/jobber-shared';
+import { IReviewDocument } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 

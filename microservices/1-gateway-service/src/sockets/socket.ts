@@ -1,6 +1,6 @@
 import { config } from '@gateway/config';
 import { GatewayCache } from '@gateway/redis/gateway.cache';
-import { IMessageDocument, IOrderDocument, IOrderNotifcation, winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { IMessageDocument, IOrderDocument, IOrderNotifcation, winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Server, Socket } from 'socket.io';
 import { io, Socket as SocketClient } from 'socket.io-client';
 import { Logger } from 'winston';

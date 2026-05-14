@@ -2,7 +2,7 @@ import { Channel } from 'amqplib';
 import { Logger } from 'winston';
 import { createConnection } from '@review/queues/connection';
 import { config } from '@review/config';
-import { winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { winstonLogger } from '@abdulmanan-ali/jobber-shared';
 
 const log: Logger = winstonLogger(`${config.ELASTIC_SEARCH_URL}`, 'reviewServiceProducer', 'debug');
 

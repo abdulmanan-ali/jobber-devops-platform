@@ -1,5 +1,5 @@
 import { getUserByUsername, signToken } from '@auth/services/auth.service';
-import { IAuthDocument } from '@uzochukwueddie/jobber-shared';
+import { IAuthDocument } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 

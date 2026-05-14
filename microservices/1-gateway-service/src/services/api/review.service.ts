@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { AxiosService } from '@gateway/services/axios';
 import { config } from '@gateway/config';
-import { IReviewDocument } from '@uzochukwueddie/jobber-shared';
+import { IReviewDocument } from '@abdulmanan-ali/jobber-shared';
 
 export let axiosReviewInstance: ReturnType<typeof axios.create>;
 

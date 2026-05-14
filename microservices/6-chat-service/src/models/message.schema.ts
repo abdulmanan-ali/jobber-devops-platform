@@ -1,4 +1,4 @@
-import { IMessageDocument } from '@uzochukwueddie/jobber-shared';
+import { IMessageDocument } from '@abdulmanan-ali/jobber-shared';
 import { Model, Schema, model } from 'mongoose';
 
 const messageSchema: Schema = new Schema(

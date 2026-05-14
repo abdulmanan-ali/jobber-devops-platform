@@ -1,5 +1,5 @@
 import { config } from '@users/config';
-import { IBuyerDocument, ISellerDocument, winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { IBuyerDocument, ISellerDocument, winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Channel, ConsumeMessage, Replies } from 'amqplib';
 import { Logger } from 'winston';
 import { createConnection } from '@users/queues/connection';

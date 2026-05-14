@@ -1,4 +1,4 @@
-import { IConversationDocument } from '@uzochukwueddie/jobber-shared';
+import { IConversationDocument } from '@abdulmanan-ali/jobber-shared';
 import { Model, Schema, model } from 'mongoose';
 
 const conversationSchema: Schema = new Schema({

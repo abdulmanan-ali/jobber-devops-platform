@@ -1,7 +1,7 @@
 import { pool } from '@review/database';
 import { publishFanoutMessage } from '@review/queues/review.producer';
 import { reviewChannel } from '@review/server';
-import { IReviewDocument, IReviewMessageDetails } from '@uzochukwueddie/jobber-shared';
+import { IReviewDocument, IReviewMessageDetails } from '@abdulmanan-ali/jobber-shared';
 import { map } from 'lodash';
 import { QueryResult } from 'pg';
 

@@ -204,19 +204,21 @@ services:
     build:
       context: ../microservices/2-notification-service
       dockerfile: Dockerfile.dev
+      args:
+      - NPM_TOKEN=${NPM_TOKEN}
     restart: always
     ports:
       - 4001:4001
     env_file: ../microservices/2-notification-service/.env
     environment:
-      - ENABLE_APM=1
+      - ENABLE_APM=0
       - NODE_ENV=development
       - CLIENT_URL=http://localhost:3000
       - RABBITMQ_ENDPOINT=amqp://jobber:jobberpass@rabbitmq_container:5672
       - SENDER_EMAIL=lysanne.rutherford88@ethereal.email
       - SENDER_EMAIL_PASSWORD=${SENDER_EMAIL_PASSWORD}
       - ELASTIC_SEARCH_URL=http://elastic:admin1234@elasticsearch_container:9200
-      - ELASTIC_APM_SERVER_URL=http://apm_server_container:8200
+      - ELASTIC_APM_SERVER_URL=
       - ELASTIC_APM_SECRET_TOKEN=
     depends_on:
       - elasticsearch

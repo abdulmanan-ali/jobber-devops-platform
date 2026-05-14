@@ -7,7 +7,7 @@ import { AxiosResponse } from 'axios';
 import { CurrentUser } from '@gateway/controllers/auth/current-user';
 import { GatewayCache } from '@gateway/redis/gateway.cache';
 
-jest.mock('@uzochukwueddie/jobber-shared');
+jest.mock('@abdulmanan-ali/jobber-shared');
 jest.mock('@gateway/services/api/auth.service');
 jest.mock('@gateway/redis/gateway.cache');
 jest.mock('@gateway/server');

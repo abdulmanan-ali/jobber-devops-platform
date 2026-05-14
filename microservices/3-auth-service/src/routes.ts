@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import { verifyGatewayRequest } from '@uzochukwueddie/jobber-shared';
+import { verifyGatewayRequest } from '@abdulmanan-ali/jobber-shared';
 import { authRoutes } from '@auth/routes/auth';
 import { currentUserRoutes } from '@auth/routes/current-user';
 import { healthRoutes } from '@auth/routes/health';

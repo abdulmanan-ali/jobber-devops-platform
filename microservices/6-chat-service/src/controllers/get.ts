@@ -1,5 +1,5 @@
 import { getConversation, getMessages, getUserConversationList, getUserMessages } from '@chat/services/message.service';
-import { IConversationDocument, IMessageDocument } from '@uzochukwueddie/jobber-shared';
+import { IConversationDocument, IMessageDocument } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 

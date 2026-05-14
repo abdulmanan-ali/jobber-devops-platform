@@ -1,4 +1,4 @@
-import { IAuthPayload, IOrderDocument } from '@uzochukwueddie/jobber-shared';
+import { IAuthPayload, IOrderDocument } from '@abdulmanan-ali/jobber-shared';
 import { Response } from 'express';
 
 export const orderMockRequest = (sessionData: IJWT, body: IOrderDocument, currentUser?: IAuthPayload | null, params?: IParams) => ({

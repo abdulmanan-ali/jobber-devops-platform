@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { IEmailLocals, winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { IEmailLocals, winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Logger } from 'winston';
 import { config } from '@notifications/config';
 import nodemailer, { Transporter } from 'nodemailer';

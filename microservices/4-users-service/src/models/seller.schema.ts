@@ -1,4 +1,4 @@
-import { ISellerDocument } from '@uzochukwueddie/jobber-shared';
+import { ISellerDocument } from '@abdulmanan-ali/jobber-shared';
 import { Model, Schema, model } from 'mongoose';
 
 const sellerSchema: Schema = new Schema(

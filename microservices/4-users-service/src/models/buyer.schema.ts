@@ -1,4 +1,4 @@
-import { IBuyerDocument } from '@uzochukwueddie/jobber-shared';
+import { IBuyerDocument } from '@abdulmanan-ali/jobber-shared';
 import mongoose, { Model, Schema, model } from 'mongoose';
 
 const buyerSchema: Schema = new Schema(

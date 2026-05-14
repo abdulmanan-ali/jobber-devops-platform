@@ -1,4 +1,4 @@
-import { IOrderDocument } from '@uzochukwueddie/jobber-shared';
+import { IOrderDocument } from '@abdulmanan-ali/jobber-shared';
 import { StatusCodes } from 'http-status-codes';
 import { Request, Response } from 'express';
 import { getOrderByOrderId, getOrdersByBuyerId, getOrdersBySellerId } from '@order/services/order.service';

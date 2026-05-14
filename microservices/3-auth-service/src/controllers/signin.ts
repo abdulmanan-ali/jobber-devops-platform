@@ -3,7 +3,7 @@ import { randomInt } from 'crypto';
 import { AuthModel } from '@auth/models/auth.schema';
 import { loginSchema } from '@auth/schemes/signin';
 import { getUserByEmail, getUserByUsername, signToken, updateUserOTP } from '@auth/services/auth.service';
-import { BadRequestError, IAuthDocument, IEmailMessageDetails, isEmail } from '@uzochukwueddie/jobber-shared';
+import { BadRequestError, IAuthDocument, IEmailMessageDetails, isEmail } from '@abdulmanan-ali/jobber-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { omit } from 'lodash';

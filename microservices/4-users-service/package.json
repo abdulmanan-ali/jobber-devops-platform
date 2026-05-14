@@ -39,7 +39,8 @@
     "typescript": "^5.2.2",
     "typescript-transform-paths": "^3.4.6",
     "uuid": "^9.0.1",
-    "winston": "^3.11.0"
+    "winston": "^3.11.0",
+    "@abdulmanan-ali/jobber-shared": "^0.3.6"
   },
   "devDependencies": {
     "@jest/types": "^29.6.3",

@@ -1,4 +1,4 @@
-import { winstonLogger } from '@uzochukwueddie/jobber-shared';
+import { winstonLogger } from '@abdulmanan-ali/jobber-shared';
 import { Logger } from 'winston';
 import { config } from '@gateway/config';
 import { Client } from '@elastic/elasticsearch';
